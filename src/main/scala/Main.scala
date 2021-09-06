@@ -19,7 +19,6 @@ def partThree(t:3)(i:Int) = t + i
 type IN = [INN] =>> Int
 // Intersction
 // 
-//val in:IN[Any] = (_:Any) => 2
 trait Config
 trait HostConfig extends Config
 trait HostController:
@@ -42,6 +41,5 @@ def getConfigs(c:HostController & PortController) = c.get
   println(msg)
   println(err) 
   println(err2) 
-//  println(in("21312"))
 
 def msg = "I was compiled by Scala 3. :)"
