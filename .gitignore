@@ -1,0 +1,47 @@
+*.class
+*.log
+.DS_Store
+
+# IntelliJ
+.idea/
+
+# VS Code
+.devcontainer/
+.vscode/
+
+# Metals Language Server (for vim / vscode)
+.metals/
+.bloop/
+.bsp/
+metals.sbt
+
+# sbt specific
+.cache
+.history
+.lib/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+web.env
+
+# Python/pipenv specific
+.mypy_cache
+__pycache__/
+
+#Datadog agent jar
+http-service/datadog/*
+
+cloudformation/logging/stackdriver/lib
+
+# Local environment variable file, can be specific to each developer
+.env
+.envrc
+
+# Terraform
+.terraform
+/http-service/script/current_cart_response.json
+/http-service/script/current_checkout_request.json
+/http-service/script/current_checkout_response.json
