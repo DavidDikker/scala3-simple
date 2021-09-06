@@ -18,13 +18,14 @@ lazy val zioTest = List(
   "dev.zio" %% "zio-test-sbt",
   "dev.zio" %% "zio-test-magnolia"
 ).map(_ % zioV % Test)
-testFrameworks += new TestFramework("zio.test.sbt.ZTestFramework")
 
 lazy val root = project
   .in(file("."))
   .settings(
     name := "scala3-simple",
-    version := "0.1.0",
     scalaVersion := scala3Version,
     libraryDependencies ++= zio ++ config ++ zioTest
   )
+publish / skip := true
+testFrameworks += new TestFramework("zio.test.sbt.ZTestFramework")
+releaseVersionBump := sbtrelease.Version.Bump.Major
