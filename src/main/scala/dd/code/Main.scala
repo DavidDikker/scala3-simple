@@ -9,8 +9,8 @@ object Main extends App:
       _    <- console.putStrLn("your name?")
       name <- console.getStrLn
       // _    <- ZIO.effect(sys.error("boom"))
-      _    <- console.putStrLn(s"Hello, $name")
-      _    <- console.putStrLn("-" * 10)
+      _ <- console.putStrLn(s"Hello, $name")
+      _ <- console.putStrLn("-" * 10)
     yield ()
   override def run(args: List[String]) = prog.exitCode
 end Main
