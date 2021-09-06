@@ -43,4 +43,5 @@ lazy val root = project
 scalafmtOnCompile := true
 publish / skip := true
 testFrameworks += new TestFramework("zio.test.sbt.ZTestFramework")
-releaseVersionBump := sbtrelease.Version.Bump.Major
+releaseVersionBump := sbtrelease.Version.Bump.Minor
+Global / onChangedBuildSource := ReloadOnSourceChanges
